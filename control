@@ -1,0 +1,10 @@
+Package: com.creaturecoding.control-center.toothmodule
+Name: ToothModule
+Depends: com.ioscreatix.silo, com.creaturecoding.libcspreferences
+Version: 1.0.1b
+Architecture: iphoneos-arm
+Description: A Bluetooth Quick Toggle CCModule
+Depiction: https://creaturesurvive.github.io/repo/cydia/toothmodule/depiction/
+Author: CreatureCoding <support@creaturecoding.com>
+Section: Control Center (Modules)
+Maintainer: CreatureCoding <support@creaturecoding.com>

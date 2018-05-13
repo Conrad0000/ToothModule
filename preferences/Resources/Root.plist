@@ -1,0 +1,104 @@
+<?xml version=1.0 encoding=UTF-8?>
+<!DOCTYPE plist PUBLIC -//Apple//DTD PLIST 1.0//EN http://www.apple.com/DTDs/PropertyList-1.0.dtd>
+<plist version=1.0>
+	<dict>
+		<key>title</key>
+		<string>ToothModule</string>
+		<key>items</key>
+		<array>
+
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>label</key>
+				<string>Enabled</string>
+				<key>key</key>
+				<string>kEnabled</string>
+				<key>isGroupToggle</key>
+				<true/>
+				<key>PostNotification</key>
+				<string>com.creaturecoding.control-center.toothmodule.device-changed</string>
+				<key>defaults</key>
+				<string>com.creaturecoding.control-center.toothmodule</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSLinkListCell</string>
+				<key>detail</key>
+				<string>CSListItemsController</string>
+				<key>label</key>
+				<string>Device To Toggle</string>
+				<key>key</key>
+				<string>kDeviceName</string>
+				<key>titlesDataSource</key>
+				<string>CSTM_deviceNames</string>
+				<key>valuesDataSource</key>
+				<string>CSTM_deviceNames</string>
+				<key>PostNotification</key>
+				<string>com.creaturecoding.control-center.toothmodule.device-changed</string>
+				<key>defaults</key>
+				<string>com.creaturecoding.control-center.toothmodule</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerText</key>
+				<string>CreatureCoding © 2017</string>
+				<key>footerAlignment</key>
+				<integer>1</integer>
+			</dict>
+
+			<dict>
+				<key>action</key>
+				<string>pushToView:</string>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>pushToPlist</key>
+				<string>Support</string>
+				<key>label</key>
+				<string>Support &amp; Creator</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>detail</key>
+				<string>CSPChangeLogController</string>
+				<key>isController</key>
+				<true/>
+				<key>label</key>
+				<string>ChangeLog</string>
+				<key>changes</key>
+				<array>
+					<dict>
+						<key>1.0.1b</key>
+						<array>
+							<string>Added Silo compatibility</string>
+							<string>Removed backup section in settings</string>
+						</array>
+					</dict>
+					<dict>
+						<key>1.0.0b</key>
+						<array>
+							<string>initial release</string>
+						</array>
+					</dict>
+				</array>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSStaticTextCell</string>
+				<key>cellClass</key>
+				<string>CSPVersionCell</string>
+				<key>bundleID</key>
+				<string>com.creaturecoding.control-center.toothmodule</string>
+				<key>label</key>
+				<string>Version:</string>
+			</dict>
+
+		</array>
+	</dict>
+</plist>
