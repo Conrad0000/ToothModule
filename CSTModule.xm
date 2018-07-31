@@ -25,6 +25,8 @@
     } else {
         [self connect];
     }
+
+    // connect you cruel bastard
     [super performSelector:@selector(refreshState) withObject:nil afterDelay:0.5];
     [super performSelector:@selector(refreshState) withObject:nil afterDelay:1];
     [super performSelector:@selector(refreshState) withObject:nil afterDelay:1.5];

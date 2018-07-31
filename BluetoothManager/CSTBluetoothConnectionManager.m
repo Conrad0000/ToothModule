@@ -34,30 +34,29 @@
 - (void)connectDevice:(BluetoothDevice *)device {
     if ([self isDeviceConnected:device]) return;
     [[self manager] connectDevice:device];
-    // CSLog(@"BTTConnect connecting %@", [device name]);
 }
 
 - (void)disconnectDevice:(BluetoothDevice *)device {
     if ([self isDeviceConnected:device]) {
+        
         [device disconnect];
-        // CSLog(@"BTTConnect disconnecting %@", [device name]);
     }
 }
 
 - (void)toggleConnectionForDevice:(BluetoothDevice *)device {
     if ([self isDeviceConnected:device]) {
+        
         [self disconnectDevice:device];
-        // CSLog(@"BTTConnect disconnecting %@", [device name]);
+        
     } else {
         [self connectDevice:device];
-        // CSLog(@"BTTConnect connecting %@", [device name]);
     }
 }
 
 - (BluetoothDevice *)pairedDeviceForName:(NSString *)name {
     BluetoothDevice *pairedDevice;
     for (BluetoothDevice *device in [self pairedDevices]) {
-        // CSLog(@"BTTConnect %@", [device description]);
+        
         if ([[device name] isEqualToString:name]) {
             pairedDevice = device;
         }
@@ -68,9 +67,8 @@
 - (BluetoothDevice *)pairedDeviceForAddress:(NSString *)address {
     BluetoothDevice *pairedDevice;
     for (BluetoothDevice *device in [self pairedDevices]) {
-        // CSLog(@"BTTConnect %@", [device address]);
+        
         if ([[device address] isEqualToString:address]) {
-            // CSLog(@"BTTConnect %@", [device description]);
             pairedDevice = device;
         }
     }

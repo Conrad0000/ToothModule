@@ -25,6 +25,7 @@ ehthumbs.db
 Thumbs.db
 obj/
 _/
+.vscode/
 .theos/
 .theos/last_package
 .theos/fakeroot
@@ -32,3 +33,5 @@ _/
 theos/
 Distribution/
 packages/
+
+depriciated/
